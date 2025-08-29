@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="title" content="Evolution Engine Official | Script Bot dan Hosting" />
+<meta name="description" content="Marketplace Evolution Engine - Jual Script Bot WhatsApp, Function Bug, Jasa Panel Pterodactyl, Website, dan Source Code. Murah, cepat, dan terpercaya." />
+<meta name="keywords" content="Evolution, Evolution Engine, Script WhatsApp, Jasa Panel, Panel Pterodactyl, Script Evolution, Web Evolution, Source Code Website, Jasa Coding, Marketplace Bot WhatsApp" />
+<meta name="author" content="Evolution Engine" />
+<meta name="robots" content="index, follow" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Evolution Engine Official | Script Bot dan Hosting" />
+<meta property="og:description" content="Marketplace Evolution Engine - Jual Script Bot WhatsApp, Function Bug, Jasa Panel Pterodactyl, Website, dan Source Code. Murah, cepat, dan terpercaya." />
+<meta property="og:url" content="https://store.exoxnana.my.id" />
+<meta property="og:image" content="https://img1.pixhost.to/images/8291/635699225_uploaded_image.jpg" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Evolution Engine Official" />
+<meta name="twitter:description" content="Jual Script Bot WhatsApp, Panel Pterodactyl, Website, Source Code, dan Jasa." />
+<meta name="twitter:image" content="https://img1.pixhost.to/images/8291/635699225_uploaded_image.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <script src="https://unpkg.com/alpinejs" defer></script>
+
+  <style>
+    body {
+      font-family: 'Fira Sans', sans-serif;
+      background: radial-gradient(circle at top left, #0f172a, #111827, #0a0f1f);
+      color: #f9fafb;
+      transition: background 0.6s ease, color 0.6s ease;
+      animation: fadeInBody 1s ease forwards;
+      min-height: 100dvh;
+    }
+    @keyframes fadeInBody {
+      from { opacity: 0; transform: scale(1.02); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .glass-card, nav, footer, [x-show="cartOpen"], .grid > div {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(99,102,241,0.4);
+      transition: all 0.4s ease, transform 0.4s cubic-bezier(.25,.8,.25,1);
+      transform-style: preserve-3d;
+    }
+    .glass-card:hover, .grid > div:hover {
+      transform: translateY(-6px) scale(1.02) rotate3d(1,1,0,5deg);
+      box-shadow:
+        0 0 25px rgba(129,140,248,0.9),
+        0 0 50px rgba(99,102,241,0.6),
+        inset 0 0 20px rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .btn-tech {
+      background: linear-gradient(90deg, #6366f1, #4f46e5);
+      color: #fff;
+      border-radius: 0.75rem;
+      padding: 0.6rem 1.2rem;
+      font-weight: 500;
+      transition: all 0.35s ease, box-shadow 0.35s ease;
+      box-shadow: 0 0 15px rgba(99,102,241,0.7);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-tech::before {
+      content: "";
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: rgba(255,255,255,0.2);
+      transform: skewX(-20deg);
+      transition: left 0.5s ease;
+    }
+    .btn-tech:hover::before { left: 200%; }
+    .btn-tech:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 0 25px rgba(129,140,248,1), 0 0 50px rgba(99,102,241,0.8);
+    }
+
+    i.text-6xl, i.bxs-user-detail, i.bxs-user {
+      transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+    }
+    i.text-6xl:hover, i.bxs-user-detail:hover, i.bxs-user:hover {
+      transform: scale(1.2) rotate(8deg);
+      text-shadow:
+        0 0 15px rgba(129,140,248,0.9),
+        0 0 30px rgba(99,102,241,0.7),
+        0 0 45px rgba(79,70,229,0.6);
+      color: #a5b4fc;
+    }
+
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.05);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, rgba(99,102,241,0.6), rgba(129,140,248,0.8));
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(129,140,248,1); }
+
+    footer a { transition: all 0.3s ease; position: relative; }
+    footer a::after {
+      content: "";
+      position: absolute;
+      width: 0%; height: 2px; bottom: -3px; left: 0;
+      background: #818cf8; transition: width 0.3s ease;
+    }
+    footer a:hover::after { width: 100%; }
+    footer a:hover {
+      color: #818cf8;
+      text-shadow: 0 0 10px rgba(129,140,248,0.8), 0 0 20px rgba(99,102,241,0.6);
+      transform: translateY(-2px);
+    }
+
+    [x-show="cartOpen"] {
+      box-shadow: -5px 0 30px rgba(99,102,241,0.7);
+      animation: slideInCart 0.5s ease;
+    }
+    @keyframes slideInCart {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(30px) scale(0.98);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .nav-spacer { height: 64px; }
+  </style>
+</head>
+<body x-data="cartApp()" class="bg-gray-900 text-gray-100 transition duration-500">
+
+  <nav class="bg-gray-900/80 backdrop-blur-md shadow-md fixed w-full z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-400 tracking-widest">Evolution Engine</h1>
+      <div class="flex items-center gap-4">
+        <button @click="cartOpen = !cartOpen" class="relative p-2 rounded-lg hover:bg-gray-800/50 transition" aria-label="Buka Keranjang">
+          <i class="fas fa-shopping-cart text-2xl"></i>
+          <span x-show="cart.length" x-text="cart.length"
+                class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full"></span>
+        </button>
+        <button @click="toggleDark()" class="text-xl p-2 rounded-lg hover:bg-gray-800/50 transition" aria-label="Toggle Mode">
+          <i :class="darkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav-spacer"></div>
+
+  <section class="max-w-4xl mx-auto px-4 py-16 text-center glass-card" data-reveal>
+    <img src="https://img1.pixhost.to/images/8291/635699225_uploaded_image.jpg" alt="Evo Avatar"
+         class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-4 border-indigo-500" />
+    <h2 class="text-3xl font-bold text-indigo-400 mb-4 tracking-wider">Evolution Engine</h2>
+    <p class="text-gray-300 leading-relaxed max-w-2xl mx-auto">
+      👋 Halo saya <span class="font-semibold text-indigo-400">Evo</span>, di sini saya menjual barang dan jasa seperti
+      <span class="font-medium text-indigo-300">Script bot WhatsApp, panel, dan lainnya</span>.
+      <br /><br />
+      Scroll ke bawah untuk melihat <span class="font-semibold text-indigo-400">produk dan jasa</span> yang tersedia.
+    </p>
+
+    <div class="mt-6 flex flex-wrap justify-center gap-4">
+      <a href="https://t.me/imevolution" target="_blank" class="btn-tech px-5 py-2 rounded-lg">
+        <i class="fab fa-telegram"></i> Telegram
+      </a>
+      <a href="https://wa.me/628938349338" target="_blank" class="btn-tech px-5 py-2 rounded-lg">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://t.me/TheEvolutionCh" target="_blank" class="btn-tech px-5 py-2 rounded-lg">
+        <i class="fab fa-telegram"></i> Informasi
+      </a>
+      <a href="https://t.me/TheEvolutionCh" target="_blank" class="btn-tech px-5 py-2 rounded-lg">
+        <i class="fab fa-telegram"></i> Testimoni
+      </a>
+      <a href="http://tiktok.com/@ajiechannel12" target="_blank" class="btn-tech px-5 py-2 rounded-lg">
+        <i class="fab fa-tiktok"></i> Tiktok
+      </a>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl font-bold text-center text-indigo-400 mb-8 tracking-wider" data-reveal>All Partner Resmi Evolution</h2>
+    <div class="flex gap-4 overflow-x-auto pb-4">
+      <template id="card-helper"></template>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user-detail text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">𝗠𝗲𝗟𝗲𝘆𝗻𝗮𝗮⛥?</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/skynotdev" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">
+          Contact 𝗠𝗲𝗟𝗲𝘆𝗻𝗮𝗮⛥?
+        </a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user-detail text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">—𝖃𝖊𝖒𝖔𝖓</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/Pridethegood" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">
+          Contact —𝖃𝖊𝖒𝖔𝖓
+        </a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user-detail text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">Linxx Offcial</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/Linxxoffc" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">
+          Contact Linxx Offcial
+        </a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user-detail text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">xᴇɴᴏ |xʏᴢ</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/xenoxyzz" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">
+          Contact xᴇɴᴏ |xʏᴢ
+        </a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">TαɱȥXƚɾҽɱҽ</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/Luxxtamz15" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact TαɱȥXƚɾҽɱҽ</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">Kurumi Official</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/XiaofaChan" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact Kurumi Official</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">の ( 𝗥𝗶𝗹𝘇𝘇 - 𝗠𝗼𝗹𝗲𝗤 )</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/rilzmoleq" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact 𝗥𝗶𝗹𝘇𝘇</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">𝑾𝒂𝒏𝒛𝐗𝐩𝐥𝐨𝐢𝐭</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/Wanzurfavboy" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact 𝑾𝒂𝒏𝒛𝐗𝐩𝐥𝐨𝐢𝐭</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">Rynxzoo</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/rynxzoo" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact Rynxzoo</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">ʙᴀɴɢ ᴅᴇᴠᴢx</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/devzjomblo" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact ʙᴀɴɢ ᴅᴇᴠᴢx</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">𝐖𝐢𝐧𝐭𝐞𝐫𝐇𝐨𝐰𝐥</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/Winter_Howl" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact 𝐖𝐢𝐧𝐭𝐞𝐫𝐇𝐨𝐰𝐥</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">Zynzz</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/zynzznotdeath" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact Zynzz</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">𝐅𝐨𝐫𝐱𝐳𝐙𝐇𝐨𝐬𝐭</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/forxzzhost" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact 𝐅𝐨𝐫𝐱𝐳𝐙𝐇𝐨𝐬𝐭</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">𝗭𝗧𝗥𝗭 || 𝗭𝗜𝗗𝗔𝗡</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/ZidanOfficial11" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact 𝗭𝗧𝗥𝗭 || 𝗭𝗜𝗗𝗔𝗡</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">𝑪𝑰𝑳𝒁𝑿</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/TheAscencion" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact 𝑪𝑰𝑳𝒁𝑿</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">FANZCRAHSER</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/fanznew" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact FANZ CRASHER</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">⏤ Mizúthyc</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/Mzusigma" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact ⏤ Mizúthyc</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">𝚈𝙾𝚆𝙼𝙰𝙽</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/gudangkejahatan" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact 𝚈𝙾𝚆𝙼𝙰𝙽</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">⏤!s`zero</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/zerohockey" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact ⏤!s`zero</a>
+      </div>
+
+      <div class="flex-none glass-card p-4 w-48 text-center" data-reveal>
+        <i class="bx bxs-user text-5xl text-indigo-500 mb-2"></i>
+        <p class="text-gray-300 font-medium">Baila</p>
+        <p class="text-sm text-gray-400">Partner</p>
+        <a href="https://t.me/Baila_real" class="btn-box mt-2 inline-block w-full py-2 rounded bg-indigo-500 text-white text-sm text-center hover:bg-indigo-600 transition">Contact Baila</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="produk" class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="text-3xl font-bold text-center mb-10 text-indigo-400 tracking-wider" data-reveal>
+    Produk Evolution
+  </h2>
+
+<div x-data="{
+  products: [
+    { id: 1, name: 'Script Web DDOS', price: 'Rp35.000', logo: 'bx bxs-bot', description: 'Script DDOS Web/Panel.' },
+    { id: 2, name: 'Script Web Bug Evolution', price: 'Rp100.000', logo: 'bx bxs-bot', description: 'Script Web Bug Evolution New.' },
+    { id: 3, name: 'Script Evolution', price: 'Rp40.000', logo: 'bx bxs-bot', description: 'Script Evolution Terbaru.' },
+    { id: 4, name: 'Partner Function', price: 'Rp35.000', logo: 'bx bxs-bot', description: 'Get Function Terbaru Evolution 100% Work.' },
+    { id: 5, name: 'Partner Pribadi Ident', price: 'Rp80.000', logo: 'bx bxs-bot', description: 'Get All Benefit PV @imevolution.' },
+    { id: 6, name: 'Partner Pribadi No Ident', price: 'Rp150.000', logo: 'bx bxs-bot', description: 'Get All Benefit PV @imevolution.' },
+    { id: 7, name: 'HTML Web', price: 'Rp150.000', logo: 'bx bxs-bot', description: 'HTML Payment , HTML Portofolio , HTML Lainnya.' },
+  ]
+}">
+    <div class="grid md:grid-cols-3 gap-8">
+      <template x-for="(p, i) in products" :key="i">
+        <div class="glass-card p-5" data-reveal>
+          <i :class="p.logo" class="text-6xl mx-auto my-5 text-indigo-600"></i>
+          <h3 class="text-xl font-semibold mb-2 text-center" x-text="p.name"></h3>
+          <p class="text-gray-500 mb-3 text-center" x-text="p.description"></p>
+          <p class="font-bold text-indigo-600 mb-4 text-center" x-text="p.price"></p>
+          <button @click="addToCart(p)" class="w-full btn-tech py-2 rounded-lg">Tambah ke Keranjang</button>
+        </div>
+      </template>
+    </div>
+  </div>
+</section>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    <template x-for="(p, i) in filteredProducts" :key="i">
+      <div class="glass-card p-5" data-reveal>
+        <i :class="p.logo" class="text-6xl mx-auto my-5 text-indigo-600"></i>
+        <h3 class="text-xl font-semibold mb-2 text-center" x-text="p.name"></h3>
+        <p class="text-gray-500 mb-3 text-center" x-text="p.description"></p>
+        <p class="font-bold text-indigo-600 mb-4 text-center" x-text="p.price"></p>
+        <button @click="addToCart(p)" class="w-full btn-tech py-2 rounded-lg">Tambah ke Keranjang</button>
+      </div>
+    </template>
+  </div>
+</div>
+
+  <footer class="bg-gray-900/80 backdrop-blur-md py-6 text-center text-gray-400" data-reveal>
+    <p>© Evolution Engine - Shenzu.</p>
+    <div class="mt-3 flex justify-center gap-4 text-xl" data-reveal="up">
+      <a href="https://t.me/imevolution" target="_blank" class="hover:text-indigo-400"><i class="fab fa-telegram"></i></a>
+      <a href="https://wa.me/628988349338" target="_blank" class="hover:text-indigo-400"><i class="fab fa-whatsapp"></i></a>
+      <a href="http://tiktok.com/@ajiechannel12" target="_blank" class="hover:text-indigo-400"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </footer>
+
+<div x-show="cartOpen"
+     x-transition.opacity
+     @click="cartOpen = false"
+     class="fixed inset-0 bg-black/50 z-40"></div>
+
+<div x-show="cartOpen"
+     x-transition
+     class="fixed top-0 right-0 w-80 h-full bg-gray-900/90 backdrop-blur-md shadow-xl p-5 overflow-y-auto transition transform z-50">
+  <h2 class="text-xl font-bold mb-4 text-indigo-400">Keranjang</h2>
+
+  <template x-for="(item, index) in cart" :key="item.id + '-' + index">
+    <div class="flex justify-between items-center mb-3">
+      <span class="text-sm" x-text="item.name"></span>
+      <div class="flex items-center gap-2">
+        <button class="px-2 rounded bg-gray-800" @click="decrement(index)">-</button>
+        <span x-text="item.qty"></span>
+        <button class="px-2 rounded bg-gray-800" @click="increment(index)">+</button>
+      </div>
+    </div>
+  </template>
+
+  <button @click="checkout()" class="w-full mt-5 btn-tech py-2 rounded-lg">Checkout</button>
+</div>
+
+<script>
+const initReveal = () => {
+  const els = document.querySelectorAll('[data-reveal]');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(el => io.observe(el));
+};
+
+document.addEventListener('alpine:init', () => {
+  Alpine.data('cartApp', () => ({
+    darkMode: false,
+    cartOpen: false,
+    filter: 'all',
+    cart: [],
+    products: [
+  { id: 1, name: 'Script Web DDOS', price: 35000, logo: 'bx bxs-bot', description: 'Script DDOS Web/Panel.' },
+  { id: 2, name: 'Script Web Evolution', price: 100000, logo: 'bx bxs-bot', description: 'Script Web Bug Terbaru Evolution.' },
+  { id: 3, name: 'Script Evolution', price: 40000, logo: 'bx bxs-bot', description: 'Script Terbaru Evolution.' },
+  { id: 4, name: 'Partner Function', price: 35000, logo: 'bx bxs-bot', description: 'Get Function Terbaru Evolution 100% Work.' },
+  { id: 5, name: 'Partner Pribadi Ident', price: 'Rp80.000', logo: 'bx bxs-bot', description: 'Get All Benefit PV @imevolution.' },
+  { id: 6, name: 'Partner Pribadi No Iden', price: 'Rp150.000', logo: 'bx bxs-bot', description: 'Get All Benefit PV @imevolution.' },
+  { id: 7, name: 'HTML Web', price: 'Rp150.000', logo: 'bx bxs-bot', description: 'HTML Payment , HTML Portofolio , HTML Lainnya.' },
+],
+    formatRupiah(n) {
+      return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(n);
+    },
+
+    addToCart(p) {
+      const found = this.cart.find(i => i.id === p.id);
+      if (found) found.qty += 1;
+      else this.cart.push({ ...p, qty: 1 });
+      this.cartOpen = true;
+    },
+
+    removeFromCart(index) { this.cart.splice(index, 1); },
+    increment(index) { this.cart[index].qty += 1; },
+    decrement(index) { this.cart[index].qty > 1 ? this.cart[index].qty -= 1 : this.cart.splice(index, 1); },
+    totalItems() { return this.cart.reduce((a, b) => a + b.qty, 0); },
+    totalPrice() { return this.cart.reduce((a, b) => a + (b.price * b.qty), 0); },
+
+    checkout() {
+      if (!this.cart.length) return;
+      const username = 'Evolution';
+      const lines = [
+  'Halo bang Evo Mau Order',
+  '===========================',
+  ...this.cart.map(i => `• ${i.name}`),
+  '---------------------------',
+  '',
+  'Mohon konfirmasi pembayaran ya, kak 🙏'
+];
+      const pesan = encodeURIComponent(lines.join('\n'));
+      const link = `https://t.me/${username}?text=${pesan}`;
+      window.open(link, '_blank');
+    },
+
+    toggleDark() {
+      this.darkMode = !this.darkMode;
+      document.documentElement.classList.toggle('dark', this.darkMode);
+    },
+
+    init() {
+      initReveal();
+    }
+  }));
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  initReveal();
+});
+</script>
+</body>
+</html>
